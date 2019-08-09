@@ -54,4 +54,13 @@ interface LightBMenuHostInterface
      * @return void
      */
     public function onMenuCompiled(LightBMenu $menu);
+
+
+    /**
+     * Sets the menu type.
+     *
+     * @param string $menuType
+     * @return void
+     */
+    public function setMenuType(string $menuType);
 }

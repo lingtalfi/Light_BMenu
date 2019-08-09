@@ -145,6 +145,7 @@ class LightBMenuService
      */
     public function registerHost(string $menuType, LightBMenuHostInterface $host)
     {
+        $host->setMenuType($menuType);
         $this->hosts[$menuType] = $host;
     }
 

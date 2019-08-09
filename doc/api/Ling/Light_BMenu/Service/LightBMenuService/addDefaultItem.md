@@ -53,7 +53,7 @@ Returns void.
 
 Source Code
 ===========
-See the source code for method [LightBMenuService::addDefaultItem](https://github.com/lingtalfi/Light_BMenu/blob/master/Service/LightBMenuService.php#L180-L186)
+See the source code for method [LightBMenuService::addDefaultItem](https://github.com/lingtalfi/Light_BMenu/blob/master/Service/LightBMenuService.php#L181-L187)
 
 
 See Also

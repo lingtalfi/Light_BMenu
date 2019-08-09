@@ -16,6 +16,7 @@ Table of contents
     - [LightBMenuAbstractHost::getMenuStructureId](https://github.com/lingtalfi/Light_BMenu/blob/master/doc/api/Ling/Light_BMenu/Host/LightBMenuAbstractHost/getMenuStructureId.md) &ndash; Returns the menu structure id for this host.
     - [LightBMenuAbstractHost::injectDefaultItems](https://github.com/lingtalfi/Light_BMenu/blob/master/doc/api/Ling/Light_BMenu/Host/LightBMenuAbstractHost/injectDefaultItems.md) &ndash; Inject menu items in the given menu structure.
     - [LightBMenuAbstractHost::onMenuCompiled](https://github.com/lingtalfi/Light_BMenu/blob/master/doc/api/Ling/Light_BMenu/Host/LightBMenuAbstractHost/onMenuCompiled.md) &ndash; This method is called after the menu has been compiled.
+    - [LightBMenuAbstractHost::setMenuType](https://github.com/lingtalfi/Light_BMenu/blob/master/doc/api/Ling/Light_BMenu/Host/LightBMenuAbstractHost/setMenuType.md) &ndash; Sets the menu type.
     - [LightBMenuAbstractHost::setMenuStructureId](https://github.com/lingtalfi/Light_BMenu/blob/master/doc/api/Ling/Light_BMenu/Host/LightBMenuAbstractHost/setMenuStructureId.md) &ndash; Sets the menuStructureId.
     - [LightBMenuAbstractHost::setDefaultItemsParentPath](https://github.com/lingtalfi/Light_BMenu/blob/master/doc/api/Ling/Light_BMenu/Host/LightBMenuAbstractHost/setDefaultItemsParentPath.md) &ndash; Sets the defaultItemsParentPath.
     - [LightBMenuHostInterface::prepareBaseMenu](https://github.com/lingtalfi/Light_BMenu/blob/master/doc/api/Ling/Light_BMenu/Host/LightBMenuHostInterface/prepareBaseMenu.md) &ndash; Injects the base menu structure in the given menu.
@@ -24,6 +25,7 @@ Table of contents
     - [LightBMenuHostInterface::prepareBaseMenu](https://github.com/lingtalfi/Light_BMenu/blob/master/doc/api/Ling/Light_BMenu/Host/LightBMenuHostInterface/prepareBaseMenu.md) &ndash; Injects the base menu structure in the given menu.
     - [LightBMenuHostInterface::injectDefaultItems](https://github.com/lingtalfi/Light_BMenu/blob/master/doc/api/Ling/Light_BMenu/Host/LightBMenuHostInterface/injectDefaultItems.md) &ndash; Inject menu items in the given menu structure.
     - [LightBMenuHostInterface::onMenuCompiled](https://github.com/lingtalfi/Light_BMenu/blob/master/doc/api/Ling/Light_BMenu/Host/LightBMenuHostInterface/onMenuCompiled.md) &ndash; This method is called after the menu has been compiled.
+    - [LightBMenuHostInterface::setMenuType](https://github.com/lingtalfi/Light_BMenu/blob/master/doc/api/Ling/Light_BMenu/Host/LightBMenuHostInterface/setMenuType.md) &ndash; Sets the menu type.
 - [LightBMenu](https://github.com/lingtalfi/Light_BMenu/blob/master/doc/api/Ling/Light_BMenu/Menu/LightBMenu.md) &ndash; The LightBMenu class.
     - DotMenu::__construct &ndash; Builds the DotMenu instance.
     - DotMenu::appendItem &ndash; by the given $parentPath, which is a bdot path.

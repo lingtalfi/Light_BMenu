@@ -80,6 +80,10 @@ $bmenu.methods_collection:
 History Log
 =============
 
+- 1.3.0 -- 2019-08-09
+
+    - add LightBMenuHostInterface->setMenuType method 
+    
 - 1.2.0 -- 2019-08-09
 
     - update the planet so that the service now accepts multiple menus (implementing the concept of menu type).

@@ -49,7 +49,7 @@ Returns void.
 
 Source Code
 ===========
-See the source code for method [LightBMenuAbstractHost::setMenuStructureId](https://github.com/lingtalfi/Light_BMenu/blob/master/Host/LightBMenuAbstractHost.php#L78-L81)
+See the source code for method [LightBMenuAbstractHost::setMenuStructureId](https://github.com/lingtalfi/Light_BMenu/blob/master/Host/LightBMenuAbstractHost.php#L94-L97)
 
 
 See Also
@@ -57,5 +57,5 @@ See Also
 
 The [LightBMenuAbstractHost](https://github.com/lingtalfi/Light_BMenu/blob/master/doc/api/Ling/Light_BMenu/Host/LightBMenuAbstractHost.md) class.
 
-Previous method: [onMenuCompiled](https://github.com/lingtalfi/Light_BMenu/blob/master/doc/api/Ling/Light_BMenu/Host/LightBMenuAbstractHost/onMenuCompiled.md)<br>Next method: [setDefaultItemsParentPath](https://github.com/lingtalfi/Light_BMenu/blob/master/doc/api/Ling/Light_BMenu/Host/LightBMenuAbstractHost/setDefaultItemsParentPath.md)<br>
+Previous method: [setMenuType](https://github.com/lingtalfi/Light_BMenu/blob/master/doc/api/Ling/Light_BMenu/Host/LightBMenuAbstractHost/setMenuType.md)<br>Next method: [setDefaultItemsParentPath](https://github.com/lingtalfi/Light_BMenu/blob/master/doc/api/Ling/Light_BMenu/Host/LightBMenuAbstractHost/setDefaultItemsParentPath.md)<br>
 

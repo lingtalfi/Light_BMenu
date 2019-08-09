@@ -51,7 +51,7 @@ Returns void.
 
 Source Code
 ===========
-See the source code for method [LightBMenuAbstractHost::onMenuCompiled](https://github.com/lingtalfi/Light_BMenu/blob/master/Host/LightBMenuAbstractHost.php#L64-L66)
+See the source code for method [LightBMenuAbstractHost::onMenuCompiled](https://github.com/lingtalfi/Light_BMenu/blob/master/Host/LightBMenuAbstractHost.php#L71-L73)
 
 
 See Also
@@ -59,5 +59,5 @@ See Also
 
 The [LightBMenuAbstractHost](https://github.com/lingtalfi/Light_BMenu/blob/master/doc/api/Ling/Light_BMenu/Host/LightBMenuAbstractHost.md) class.
 
-Previous method: [injectDefaultItems](https://github.com/lingtalfi/Light_BMenu/blob/master/doc/api/Ling/Light_BMenu/Host/LightBMenuAbstractHost/injectDefaultItems.md)<br>Next method: [setMenuStructureId](https://github.com/lingtalfi/Light_BMenu/blob/master/doc/api/Ling/Light_BMenu/Host/LightBMenuAbstractHost/setMenuStructureId.md)<br>
+Previous method: [injectDefaultItems](https://github.com/lingtalfi/Light_BMenu/blob/master/doc/api/Ling/Light_BMenu/Host/LightBMenuAbstractHost/injectDefaultItems.md)<br>Next method: [setMenuType](https://github.com/lingtalfi/Light_BMenu/blob/master/doc/api/Ling/Light_BMenu/Host/LightBMenuAbstractHost/setMenuType.md)<br>
 

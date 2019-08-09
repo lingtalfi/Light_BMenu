@@ -19,6 +19,12 @@ abstract class LightBMenuAbstractHost implements LightBMenuHostInterface
     protected $menuStructureId;
 
     /**
+     * This property holds the menuType for this instance.
+     * @var string
+     */
+    protected $menuType;
+
+    /**
      * This property holds the defaultItemsParentPath for this instance.
      * Where to inject the default items.
      * Null means at the root of the menu.
@@ -36,6 +42,7 @@ abstract class LightBMenuAbstractHost implements LightBMenuHostInterface
     public function __construct()
     {
         $this->menuStructureId = "";
+        $this->menuType = "";
         $this->defaultItemsParentPath = null;
     }
 
@@ -64,6 +71,15 @@ abstract class LightBMenuAbstractHost implements LightBMenuHostInterface
     public function onMenuCompiled(LightBMenu $menu){
 
     }
+
+    /**
+     * @implementation
+     */
+    public function setMenuType(string $menuType)
+    {
+        $this->menuType = $menuType;
+    }
+
 
 
     //--------------------------------------------
