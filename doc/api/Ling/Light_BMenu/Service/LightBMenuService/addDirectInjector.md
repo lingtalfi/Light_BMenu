@@ -58,7 +58,7 @@ Exceptions thrown
 
 Source Code
 ===========
-See the source code for method [LightBMenuService::addDirectInjector](https://github.com/lingtalfi/Light_BMenu/blob/master/Service/LightBMenuService.php#L161-L172)
+See the source code for method [LightBMenuService::addDirectInjector](https://github.com/lingtalfi/Light_BMenu/blob/master/Service/LightBMenuService.php#L163-L174)
 
 
 See Also

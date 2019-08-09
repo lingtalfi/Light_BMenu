@@ -80,6 +80,10 @@ $bmenu.methods_collection:
 History Log
 =============
 
+- 1.4.0 -- 2019-08-09
+
+    - update LightBMenuHostInterface->onMenuCompiled method now uses an array as its argument 
+    
 - 1.3.0 -- 2019-08-09
 
     - add LightBMenuHostInterface->setMenuType method 

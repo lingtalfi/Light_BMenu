@@ -68,7 +68,8 @@ abstract class LightBMenuAbstractHost implements LightBMenuHostInterface
     /**
      * @implementation
      */
-    public function onMenuCompiled(LightBMenu $menu){
+    public function onMenuCompiled(array &$menu)
+    {
 
     }
 

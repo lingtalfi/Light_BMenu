@@ -49,7 +49,7 @@ Returns void.
 
 Source Code
 ===========
-See the source code for method [LightBMenuAbstractHost::setMenuType](https://github.com/lingtalfi/Light_BMenu/blob/master/Host/LightBMenuAbstractHost.php#L78-L81)
+See the source code for method [LightBMenuAbstractHost::setMenuType](https://github.com/lingtalfi/Light_BMenu/blob/master/Host/LightBMenuAbstractHost.php#L79-L82)
 
 
 See Also

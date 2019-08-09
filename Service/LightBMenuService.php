@@ -128,13 +128,15 @@ class LightBMenuService
         }
 
 
+        $ret = $menu->getItems();
+
         //--------------------------------------------
         // LAST OPPORTUNITY TO CHANGE THE MENU
         //--------------------------------------------
-        $host->onMenuCompiled($menu);
+        $host->onMenuCompiled($ret);
 
 
-        return $menu->getItems();
+        return $ret;
     }
 
     /**

@@ -16,12 +16,13 @@ Description
 ================
 
 
-abstract public [LightBMenuHostInterface::onMenuCompiled](https://github.com/lingtalfi/Light_BMenu/blob/master/doc/api/Ling/Light_BMenu/Host/LightBMenuHostInterface/onMenuCompiled.md)([Ling\Light_BMenu\Menu\LightBMenu](https://github.com/lingtalfi/Light_BMenu/blob/master/doc/api/Ling/Light_BMenu/Menu/LightBMenu.md) $menu) : void
+abstract public [LightBMenuHostInterface::onMenuCompiled](https://github.com/lingtalfi/Light_BMenu/blob/master/doc/api/Ling/Light_BMenu/Host/LightBMenuHostInterface/onMenuCompiled.md)(array &$menu) : void
 
 
 
 
 This method is called after the menu has been compiled.
+
 It provides the developer to do something like process special menu item keys for instance,
 and change the menu structure before it is returned.
 
@@ -51,7 +52,7 @@ Returns void.
 
 Source Code
 ===========
-See the source code for method [LightBMenuHostInterface::onMenuCompiled](https://github.com/lingtalfi/Light_BMenu/blob/master/Host/LightBMenuHostInterface.php#L56-L56)
+See the source code for method [LightBMenuHostInterface::onMenuCompiled](https://github.com/lingtalfi/Light_BMenu/blob/master/Host/LightBMenuHostInterface.php#L57-L57)
 
 
 See Also

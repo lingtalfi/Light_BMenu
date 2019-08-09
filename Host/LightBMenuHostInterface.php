@@ -47,13 +47,14 @@ interface LightBMenuHostInterface
 
     /**
      * This method is called after the menu has been compiled.
+     *
      * It provides the developer to do something like process special menu item keys for instance,
      * and change the menu structure before it is returned.
      *
-     * @param LightBMenu $menu
+     * @param array $menu
      * @return void
      */
-    public function onMenuCompiled(LightBMenu $menu);
+    public function onMenuCompiled(array &$menu);
 
 
     /**

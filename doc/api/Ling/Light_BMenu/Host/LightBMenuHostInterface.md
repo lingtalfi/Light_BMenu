@@ -28,7 +28,7 @@ abstract class <span class="pl-k">LightBMenuHostInterface</span>  {
     - abstract public [getMenuStructureId](https://github.com/lingtalfi/Light_BMenu/blob/master/doc/api/Ling/Light_BMenu/Host/LightBMenuHostInterface/getMenuStructureId.md)() : string
     - abstract public [prepareBaseMenu](https://github.com/lingtalfi/Light_BMenu/blob/master/doc/api/Ling/Light_BMenu/Host/LightBMenuHostInterface/prepareBaseMenu.md)([Ling\Light_BMenu\Menu\LightBMenu](https://github.com/lingtalfi/Light_BMenu/blob/master/doc/api/Ling/Light_BMenu/Menu/LightBMenu.md) $menu) : mixed
     - abstract public [injectDefaultItems](https://github.com/lingtalfi/Light_BMenu/blob/master/doc/api/Ling/Light_BMenu/Host/LightBMenuHostInterface/injectDefaultItems.md)(array $items, [Ling\Light_BMenu\Menu\LightBMenu](https://github.com/lingtalfi/Light_BMenu/blob/master/doc/api/Ling/Light_BMenu/Menu/LightBMenu.md) $menu) : mixed
-    - abstract public [onMenuCompiled](https://github.com/lingtalfi/Light_BMenu/blob/master/doc/api/Ling/Light_BMenu/Host/LightBMenuHostInterface/onMenuCompiled.md)([Ling\Light_BMenu\Menu\LightBMenu](https://github.com/lingtalfi/Light_BMenu/blob/master/doc/api/Ling/Light_BMenu/Menu/LightBMenu.md) $menu) : void
+    - abstract public [onMenuCompiled](https://github.com/lingtalfi/Light_BMenu/blob/master/doc/api/Ling/Light_BMenu/Host/LightBMenuHostInterface/onMenuCompiled.md)(array &$menu) : void
     - abstract public [setMenuType](https://github.com/lingtalfi/Light_BMenu/blob/master/doc/api/Ling/Light_BMenu/Host/LightBMenuHostInterface/setMenuType.md)(string $menuType) : void
 
 }
