@@ -72,6 +72,10 @@ $bmenu.methods_collection:
 History Log
 =============
 
+- 1.1.0 -- 2019-08-09
+
+    - update menu item structure, link becomes url, added badge_text and badge_class
+    
 - 1.0.0 -- 2019-08-08
 
     - initial commit

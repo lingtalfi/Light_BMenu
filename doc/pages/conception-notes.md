@@ -132,10 +132,13 @@ The menu item structure
 
 A menu item has the following structure (only the id and the children keys are mandatory):
 
+
 - id: string, the identifier for this menu item (it should be unique amongst its siblings)
 - icon: string, the css class for the icon
 - text: string, the text of the menu item 
-- link: string, the url of the menu item (for leave nodes only, not parents)
+- url: string, the url of the menu item (for leave nodes only, not parents)
+- badge_text: string, the text of the badge (the badge is displayed next to the menu item text)
+- badge_class: string, the css class to add to the badge
 - children: array, an array of menu items (recursion accepted)
  
 
