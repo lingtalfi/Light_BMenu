@@ -12,14 +12,19 @@ use Ling\Light_BMenu\Menu\LightBMenu;
 /**
  * The LightBMenuService class.
  *
- * This class can return a menu created collaboratively with
- * a host and some participant plugins.
+ * This class can return menus created collaboratively with
+ * some hosts and some participant plugins.
  *
- * The host is first prompted to layout the main structure.
- * Then plugins (aka subscribers) are then called to complement this menu.
+ *
+ * Each host is first prompted to create the main menu structure.
+ * Then plugins (aka subscribers) are then called to complement the host menu.
  *
  *
  * The menu item structure is defined in the @page(conception notes).
+ *
+ *
+ * Each host is bound to a menuType (like "main menu" for instance), so that we can have multiple
+ * menus displayed on the same page.
  *
  *
  */
@@ -29,23 +34,41 @@ class LightBMenuService
 
     /**
      * This property holds the host for this instance.
-     * @var LightBMenuHostInterface
+     *
+     * Array of menuType => LightBMenuHostInterface instance
+     *
+     *
+     * @var LightBMenuHostInterface[]
      */
-    protected $host;
+    protected $hosts;
 
     /**
      * This property holds the directInjectors for this instance.
-     * They can be either BMenuDirectInjectorInterface instances,
-     * or php callable which take two arguments: the menuStructureId and the LightBMenu instance.
      *
-     * @var BMenuDirectInjectorInterface[]|callable[]
+     * It's an array of menuType => directInjectors.
+     *
+     * With:
+     * - menuType: string, the menu type (see @page(conception notes) for more details)
+     * - directInjectors: BMenuDirectInjectorInterface[]|callable[], an array of direct injectors,
+     *          each of which being either a BMenuDirectInjectorInterface instance, or a
+     *          php callable which take two arguments: the menuStructureId and the LightBMenu instance.
+     *
+     * @var array
      */
     protected $directInjectors;
 
     /**
      * This property holds the defaultItems for this instance.
-     * Those will be handled automatically by the host plugin.
+     *
+     * An array of menuType => defaultItems.
+     *
+     * With:
+     * - menuType: string, the menu type (see @page(conception notes) for more details)
+     * - defaultItems: an array of menu items
+     *
+     *
      * See the @page(conception notes) for more details.
+     *
      * @var array
      */
     protected $defaultItems;
@@ -56,34 +79,38 @@ class LightBMenuService
      */
     public function __construct()
     {
-        $this->host = null;
+        $this->hosts = [];
         $this->directInjectors = [];
         $this->defaultItems = [];
     }
 
 
     /**
-     * Returns the computed menu items.
+     * Returns the computed menu items identified by the given $menuType.
      *
+     * @param $menuType
      * @return array
      * @throws LightBMenuException
      */
-    public function getItems(): array
+    public function getItems(string $menuType): array
     {
-        if (null === $this->host) {
+
+        if (false === array_key_exists($menuType, $this->hosts)) {
             throw new LightBMenuException("Host not defined.");
         }
 
 
+        $host = $this->hosts[$menuType];
         $menu = new LightBMenu();
-        $menuStructureId = $this->host->getMenuStructureId();
-        $this->host->prepareBaseMenu($menu);
+        $menuStructureId = $host->getMenuStructureId();
+        $host->prepareBaseMenu($menu);
 
 
         //--------------------------------------------
         // TECHNIQUE #1: DIRECT INJECTION
         //--------------------------------------------
-        foreach ($this->directInjectors as $injector) {
+        $injectors = $this->directInjectors[$menuType] ?? [];
+        foreach ($injectors as $injector) {
             if ($injector instanceof BMenuDirectInjectorInterface) {
                 $injector->inject($menuStructureId, $menu);
             } else {
@@ -95,40 +122,48 @@ class LightBMenuService
         //--------------------------------------------
         // TECHNIQUE #2: HOST DRIVEN INJECTION
         //--------------------------------------------
-        $this->host->injectDefaultItems($this->defaultItems, $menu);
-
+        $defaultItems = $this->defaultItems[$menuType] ?? [];
+        if ($defaultItems) {
+            $host->injectDefaultItems($defaultItems, $menu);
+        }
 
 
         //--------------------------------------------
         // LAST OPPORTUNITY TO CHANGE THE MENU
         //--------------------------------------------
-        $this->host->onMenuCompiled($menu);
+        $host->onMenuCompiled($menu);
 
 
         return $menu->getItems();
     }
 
     /**
-     * Sets the host.
+     * Registers a host.
      *
+     * @param string $menuType
      * @param LightBMenuHostInterface $host
      */
-    public function setHost(LightBMenuHostInterface $host)
+    public function registerHost(string $menuType, LightBMenuHostInterface $host)
     {
-        $this->host = $host;
+        $this->hosts[$menuType] = $host;
     }
 
 
     /**
-     * Adds a direct injector to this instance.
+     * Adds a direct injector to menu identified by $menuType.
      *
-     * @param $injector
+     *
+     * @param string $menuType
+     * @param callable|BMenuDirectInjectorInterface $injector
      * @throws \Exception
      */
-    public function addDirectInjector($injector)
+    public function addDirectInjector(string $menuType, $injector)
     {
         if ($injector instanceof BMenuDirectInjectorInterface || is_callable($injector)) {
-            $this->directInjectors[] = $injector;
+            if (false === array_key_exists($menuType, $this->directInjectors)) {
+                $this->directInjectors[$menuType] = [];
+            }
+            $this->directInjectors[$menuType][] = $injector;
         } else {
             $type = gettype($injector);
             throw new LightBMenuException("Wrong injector type: it should be a BMenuDirectInjectorInterface instance or a callable, $type given.");
@@ -137,13 +172,17 @@ class LightBMenuService
 
 
     /**
-     * Adds a default item to the menu.
+     * Adds a default item to the menu identified by $menuType.
      *
+     * @param string $menuType
      * @param array $item
      */
-    public function addDefaultItem(array $item)
+    public function addDefaultItem(string $menuType, array $item)
     {
-        $this->defaultItems[] = $item;
+        if (false === array_key_exists($menuType, $this->defaultItems)) {
+            $this->defaultItems[$menuType] = [];
+        }
+        $this->defaultItems[$menuType][] = $item;
     }
 
 }

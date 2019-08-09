@@ -14,7 +14,7 @@ Summary
 The rough idea
 --------------
 
-This service tries to provide a workaround for the following problem, where we want to create a menu
+This service tries to provide a workaround for the following problem, where we want to create some menu(s)
 in an application that accepts plugins, and taking into account that the menu structure might evolve (as 
 the application might evolve with time).
 
@@ -28,7 +28,17 @@ Our workaround involves two actors:
 
 
 
-The synopsis starts with the host generating a **menuStructureId**.
+The synopsis starts with registering a host.
+
+A host is basically the entity responsible for displaying the menu.
+
+When we register the host, we assign it to a menu type, like "main menu" for instance.
+
+And so we can register different hosts, each host responsible for displaying a specific menu type. 
+
+
+
+Now at the host level, each host generates a **menuStructureId**.
 
 The **menuStructureId** serves as an identifier of the menu structure.
 

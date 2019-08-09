@@ -7,7 +7,7 @@ LightBMenuService::addDirectInjector
 
 
 
-LightBMenuService::addDirectInjector — Adds a direct injector to this instance.
+LightBMenuService::addDirectInjector — Adds a direct injector to menu identified by $menuType.
 
 
 
@@ -16,12 +16,12 @@ Description
 ================
 
 
-public [LightBMenuService::addDirectInjector](https://github.com/lingtalfi/Light_BMenu/blob/master/doc/api/Ling/Light_BMenu/Service/LightBMenuService/addDirectInjector.md)(?$injector) : void
+public [LightBMenuService::addDirectInjector](https://github.com/lingtalfi/Light_BMenu/blob/master/doc/api/Ling/Light_BMenu/Service/LightBMenuService/addDirectInjector.md)(string $menuType, ?$injector) : void
 
 
 
 
-Adds a direct injector to this instance.
+Adds a direct injector to menu identified by $menuType.
 
 
 
@@ -29,6 +29,10 @@ Adds a direct injector to this instance.
 Parameters
 ================
 
+
+- menuType
+
+    
 
 - injector
 
@@ -54,7 +58,7 @@ Exceptions thrown
 
 Source Code
 ===========
-See the source code for method [LightBMenuService::addDirectInjector](https://github.com/lingtalfi/Light_BMenu/blob/master/Service/LightBMenuService.php#L128-L136)
+See the source code for method [LightBMenuService::addDirectInjector](https://github.com/lingtalfi/Light_BMenu/blob/master/Service/LightBMenuService.php#L160-L171)
 
 
 See Also
@@ -62,5 +66,5 @@ See Also
 
 The [LightBMenuService](https://github.com/lingtalfi/Light_BMenu/blob/master/doc/api/Ling/Light_BMenu/Service/LightBMenuService.md) class.
 
-Previous method: [setHost](https://github.com/lingtalfi/Light_BMenu/blob/master/doc/api/Ling/Light_BMenu/Service/LightBMenuService/setHost.md)<br>Next method: [addDefaultItem](https://github.com/lingtalfi/Light_BMenu/blob/master/doc/api/Ling/Light_BMenu/Service/LightBMenuService/addDefaultItem.md)<br>
+Previous method: [registerHost](https://github.com/lingtalfi/Light_BMenu/blob/master/doc/api/Ling/Light_BMenu/Service/LightBMenuService/registerHost.md)<br>Next method: [addDefaultItem](https://github.com/lingtalfi/Light_BMenu/blob/master/doc/api/Ling/Light_BMenu/Service/LightBMenuService/addDefaultItem.md)<br>
 

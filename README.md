@@ -60,10 +60,18 @@ And here is an excerpt of a host application defining the host for this service:
 ```yaml
 $bmenu.methods_collection:
     -
-        method: setHost
+        method: registerHost
         args:
+            menu_type: main_menu
             host:
                 instance: Ling\Light_Kit_Admin\BMenu\LightKitAdminBMenuHost
+                methods:
+                    setAppDir:
+                        dir: ${app_dir}
+                    setMenuStructureId:
+                        id: lka_mainmenu_1
+                    setDefaultItemsParentPath:
+                        path: plugins
 ``` 
 
 
@@ -72,6 +80,10 @@ $bmenu.methods_collection:
 History Log
 =============
 
+- 1.2.0 -- 2019-08-09
+
+    - update the planet so that the service now accepts multiple menus (implementing the concept of menu type).
+    
 - 1.1.0 -- 2019-08-09
 
     - update menu item structure, link becomes url, added badge_text and badge_class

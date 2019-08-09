@@ -7,7 +7,7 @@ LightBMenuService::addDefaultItem
 
 
 
-LightBMenuService::addDefaultItem — Adds a default item to the menu.
+LightBMenuService::addDefaultItem — Adds a default item to the menu identified by $menuType.
 
 
 
@@ -16,12 +16,12 @@ Description
 ================
 
 
-public [LightBMenuService::addDefaultItem](https://github.com/lingtalfi/Light_BMenu/blob/master/doc/api/Ling/Light_BMenu/Service/LightBMenuService/addDefaultItem.md)(array $item) : void
+public [LightBMenuService::addDefaultItem](https://github.com/lingtalfi/Light_BMenu/blob/master/doc/api/Ling/Light_BMenu/Service/LightBMenuService/addDefaultItem.md)(string $menuType, array $item) : void
 
 
 
 
-Adds a default item to the menu.
+Adds a default item to the menu identified by $menuType.
 
 
 
@@ -29,6 +29,10 @@ Adds a default item to the menu.
 Parameters
 ================
 
+
+- menuType
+
+    
 
 - item
 
@@ -49,7 +53,7 @@ Returns void.
 
 Source Code
 ===========
-See the source code for method [LightBMenuService::addDefaultItem](https://github.com/lingtalfi/Light_BMenu/blob/master/Service/LightBMenuService.php#L144-L147)
+See the source code for method [LightBMenuService::addDefaultItem](https://github.com/lingtalfi/Light_BMenu/blob/master/Service/LightBMenuService.php#L180-L186)
 
 
 See Also

@@ -7,7 +7,7 @@ LightBMenuService::getItems
 
 
 
-LightBMenuService::getItems — Returns the computed menu items.
+LightBMenuService::getItems — Returns the computed menu items identified by the given $menuType.
 
 
 
@@ -16,12 +16,12 @@ Description
 ================
 
 
-public [LightBMenuService::getItems](https://github.com/lingtalfi/Light_BMenu/blob/master/doc/api/Ling/Light_BMenu/Service/LightBMenuService/getItems.md)() : array
+public [LightBMenuService::getItems](https://github.com/lingtalfi/Light_BMenu/blob/master/doc/api/Ling/Light_BMenu/Service/LightBMenuService/getItems.md)(string $menuType) : array
 
 
 
 
-Returns the computed menu items.
+Returns the computed menu items identified by the given $menuType.
 
 
 
@@ -29,7 +29,10 @@ Returns the computed menu items.
 Parameters
 ================
 
-This method has no parameters.
+
+- menuType
+
+    
 
 
 Return values
@@ -51,7 +54,7 @@ Exceptions thrown
 
 Source Code
 ===========
-See the source code for method [LightBMenuService::getItems](https://github.com/lingtalfi/Light_BMenu/blob/master/Service/LightBMenuService.php#L71-L109)
+See the source code for method [LightBMenuService::getItems](https://github.com/lingtalfi/Light_BMenu/blob/master/Service/LightBMenuService.php#L95-L138)
 
 
 See Also
@@ -59,5 +62,5 @@ See Also
 
 The [LightBMenuService](https://github.com/lingtalfi/Light_BMenu/blob/master/doc/api/Ling/Light_BMenu/Service/LightBMenuService.md) class.
 
-Previous method: [__construct](https://github.com/lingtalfi/Light_BMenu/blob/master/doc/api/Ling/Light_BMenu/Service/LightBMenuService/__construct.md)<br>Next method: [setHost](https://github.com/lingtalfi/Light_BMenu/blob/master/doc/api/Ling/Light_BMenu/Service/LightBMenuService/setHost.md)<br>
+Previous method: [__construct](https://github.com/lingtalfi/Light_BMenu/blob/master/doc/api/Ling/Light_BMenu/Service/LightBMenuService/__construct.md)<br>Next method: [registerHost](https://github.com/lingtalfi/Light_BMenu/blob/master/doc/api/Ling/Light_BMenu/Service/LightBMenuService/registerHost.md)<br>
 
