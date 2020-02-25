@@ -1,6 +1,6 @@
 Light_BMenu
 ===========
-2019-08-08
+2019-08-08 -> 2020-02-25
 
 
 
@@ -80,6 +80,10 @@ $bmenu.methods_collection:
 History Log
 =============
 
+- 1.5.0 -- 2020-02-25
+
+    - add LightBMenuTool class
+    
 - 1.4.0 -- 2019-08-09
 
     - update LightBMenuHostInterface->onMenuCompiled method now uses an array as its argument 
