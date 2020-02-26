@@ -29,14 +29,14 @@ class LightBMenuTool
     public static function getActiveOpenInfo(array $item, string $currentUri): array
     {
         $url = $item['url'] ?? "";
-        $isActive = ($currentUri === $url);
+        $isActive = self::menuItemIsActive($url, $currentUri);
         $isOpened = false;
         $arr = [$item];
 
 
         ArrayTool::walkRowsRecursive($arr, function ($child) use (&$isOpened, $currentUri) {
             $url = $child['url'] ?? "";
-            if ($currentUri === $url) {
+            if (true === self::menuItemIsActive($url, $currentUri)) {
                 $isOpened = true;
             }
         }, 'children', false);
@@ -46,5 +46,35 @@ class LightBMenuTool
             $isActive,
             $isOpened,
         ];
+    }
+
+
+    /**
+     * Returns whether the menu item (which url is given) matches the given currentUri.
+     *
+     * Note: I didn't want to go too much in details and compare all arguments, which would be more stable,
+     * but would cost more performances. I don't know if I made a wise choice, can always come back later and
+     * fine tune this...
+     *
+     * With the current method, at least I got rid of the problem with the given url...
+     *
+     * - /hub?plugin=Light_Kit_Admin&controller=Generated/LudUserController&m=f&id=2
+     *
+     * ...not matching
+     *
+     * - /hub?plugin=Light_Kit_Admin&controller=Generated/LudUserController
+     *
+     *
+     *
+     * @param string $url
+     * @param $currentUri
+     * @return bool
+     */
+    private static function menuItemIsActive(string $url, $currentUri): bool
+    {
+        if ($url) {
+            return (0 === strpos($currentUri, $url));
+        }
+        return false;
     }
 }

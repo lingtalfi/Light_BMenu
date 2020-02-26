@@ -65,5 +65,5 @@ See Also
 
 The [LightBMenuTool](https://github.com/lingtalfi/Light_BMenu/blob/master/doc/api/Ling/Light_BMenu/Tool/LightBMenuTool.md) class.
 
-
+Next method: [menuItemIsActive](https://github.com/lingtalfi/Light_BMenu/blob/master/doc/api/Ling/Light_BMenu/Tool/LightBMenuTool/menuItemIsActive.md)<br>
 

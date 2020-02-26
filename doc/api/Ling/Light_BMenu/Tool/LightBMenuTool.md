@@ -4,7 +4,7 @@
 
 The LightBMenuTool class
 ================
-2019-08-08 --> 2020-02-25
+2019-08-08 --> 2020-02-26
 
 
 
@@ -26,6 +26,7 @@ class <span class="pl-k">LightBMenuTool</span>  {
 
 - Methods
     - public static [getActiveOpenInfo](https://github.com/lingtalfi/Light_BMenu/blob/master/doc/api/Ling/Light_BMenu/Tool/LightBMenuTool/getActiveOpenInfo.md)(array $item, string $currentUri) : array
+    - private static [menuItemIsActive](https://github.com/lingtalfi/Light_BMenu/blob/master/doc/api/Ling/Light_BMenu/Tool/LightBMenuTool/menuItemIsActive.md)(string $url, $currentUri) : bool
 
 }
 
@@ -38,6 +39,7 @@ Methods
 ==============
 
 - [LightBMenuTool::getActiveOpenInfo](https://github.com/lingtalfi/Light_BMenu/blob/master/doc/api/Ling/Light_BMenu/Tool/LightBMenuTool/getActiveOpenInfo.md) &ndash; - 0: bool, isActive.
+- [LightBMenuTool::menuItemIsActive](https://github.com/lingtalfi/Light_BMenu/blob/master/doc/api/Ling/Light_BMenu/Tool/LightBMenuTool/menuItemIsActive.md) &ndash; Returns whether the menu item (which url is given) matches the given currentUri.
 
 
 
