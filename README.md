@@ -1,6 +1,6 @@
 Light_BMenu
 ===========
-2019-08-08 -> 2020-02-26
+2019-08-08 -> 2020-02-28
 
 
 
@@ -80,6 +80,10 @@ $bmenu.methods_collection:
 History Log
 =============
 
+- 1.5.2 -- 2020-02-28
+
+    - update documentation 
+    
 - 1.5.1 -- 2020-02-26
 
     - update LightBMenuTool::getActiveOpenInfo, improve url detection feature 
