@@ -1,6 +1,6 @@
 Ling/Light_BMenu
 ================
-2019-08-08 --> 2020-02-28
+2019-08-08 --> 2020-07-02
 
 
 
@@ -27,7 +27,7 @@ Table of contents
     - [LightBMenuHostInterface::onMenuCompiled](https://github.com/lingtalfi/Light_BMenu/blob/master/doc/api/Ling/Light_BMenu/Host/LightBMenuHostInterface/onMenuCompiled.md) &ndash; This method is called after the menu has been compiled.
     - [LightBMenuHostInterface::setMenuType](https://github.com/lingtalfi/Light_BMenu/blob/master/doc/api/Ling/Light_BMenu/Host/LightBMenuHostInterface/setMenuType.md) &ndash; Sets the menu type.
 - [LightBMenu](https://github.com/lingtalfi/Light_BMenu/blob/master/doc/api/Ling/Light_BMenu/Menu/LightBMenu.md) &ndash; The LightBMenu class.
-    - DotMenu::__construct &ndash; Builds the DotMenu instance.
+    - [LightBMenu::__construct](https://github.com/lingtalfi/Light_BMenu/blob/master/doc/api/Ling/Light_BMenu/Menu/LightBMenu/__construct.md) &ndash; Builds the DotMenu instance.
     - DotMenu::appendItem &ndash; by the given $parentPath, which is a bdot path.
     - DotMenu::getItems &ndash; Return the items.
     - DotMenu::setItems &ndash; Sets the items.
