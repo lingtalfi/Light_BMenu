@@ -80,6 +80,10 @@ $bmenu.methods_collection:
 History Log
 =============
 
+- 1.7.0 -- 2020-07-02
+
+    - add LightBMenuService->addDefaultItemByFile method  
+    
 - 1.6.0 -- 2020-07-02
 
     - update LightBMenu, now uses strictMode by default  
