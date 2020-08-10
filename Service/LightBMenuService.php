@@ -200,6 +200,7 @@ class LightBMenuService
      * Add direct items to this instance.
      *
      * The items are found in the given file.
+     * In the form of an array of menuParentPath => items.
      *
      * @param string $menuType
      * @param string $file
@@ -216,6 +217,31 @@ class LightBMenuService
             }
             $this->directItems[$menuType][$menuPath] = array_merge($this->directItems[$menuType][$menuPath], $items);
         }
+    }
+
+    /**
+     * Add direct items to this instance.
+     *
+     * The items are found in the given file.
+     * In the form of an array items.
+     * They will be appended at the given parentPath key.
+     *
+     *
+     *
+     * @param string $menuType
+     * @param string $file
+     * @param string $parentPath
+     */
+    public function addDirectItemsByFileAndParentPath(string $menuType, string $file, string $parentPath)
+    {
+        if (false === array_key_exists($menuType, $this->directItems)) {
+            $this->directItems[$menuType] = [];
+        }
+        $items = BabyYamlUtil::readFile($file);
+        if (false === array_key_exists($parentPath, $this->directItems[$menuType])) {
+            $this->directItems[$menuType][$parentPath] = [];
+        }
+        $this->directItems[$menuType][$parentPath] = array_merge($this->directItems[$menuType][$parentPath], $items);
     }
 
     /**

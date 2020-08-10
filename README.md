@@ -80,6 +80,10 @@ $bmenu.methods_collection:
 History Log
 =============
 
+- 1.9.0 -- 2020-08-10
+
+    - add LightBMenuService->addDirectItemsByFileAndParentPath method  
+    
 - 1.8.0 -- 2020-08-10
 
     - add LightBMenuService->addDirectItemsByFile method  

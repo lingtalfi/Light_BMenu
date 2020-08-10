@@ -24,6 +24,7 @@ public [LightBMenuService::addDirectItemsByFile](https://github.com/lingtalfi/Li
 Add direct items to this instance.
 
 The items are found in the given file.
+In the form of an array of menuParentPath => items.
 
 
 
@@ -55,7 +56,7 @@ Returns void.
 
 Source Code
 ===========
-See the source code for method [LightBMenuService::addDirectItemsByFile](https://github.com/lingtalfi/Light_BMenu/blob/master/Service/LightBMenuService.php#L207-L219)
+See the source code for method [LightBMenuService::addDirectItemsByFile](https://github.com/lingtalfi/Light_BMenu/blob/master/Service/LightBMenuService.php#L208-L220)
 
 
 See Also
@@ -63,5 +64,5 @@ See Also
 
 The [LightBMenuService](https://github.com/lingtalfi/Light_BMenu/blob/master/doc/api/Ling/Light_BMenu/Service/LightBMenuService.md) class.
 
-Previous method: [addDirectInjector](https://github.com/lingtalfi/Light_BMenu/blob/master/doc/api/Ling/Light_BMenu/Service/LightBMenuService/addDirectInjector.md)<br>Next method: [addDefaultItem](https://github.com/lingtalfi/Light_BMenu/blob/master/doc/api/Ling/Light_BMenu/Service/LightBMenuService/addDefaultItem.md)<br>
+Previous method: [addDirectInjector](https://github.com/lingtalfi/Light_BMenu/blob/master/doc/api/Ling/Light_BMenu/Service/LightBMenuService/addDirectInjector.md)<br>Next method: [addDirectItemsByFileAndParentPath](https://github.com/lingtalfi/Light_BMenu/blob/master/doc/api/Ling/Light_BMenu/Service/LightBMenuService/addDirectItemsByFileAndParentPath.md)<br>
 
