@@ -1,6 +1,6 @@
 Light_BMenu
 ===========
-2019-08-08 -> 2020-07-02
+2019-08-08 -> 2020-08-10
 
 
 
@@ -80,6 +80,10 @@ $bmenu.methods_collection:
 History Log
 =============
 
+- 1.8.0 -- 2020-08-10
+
+    - add LightBMenuService->addDirectItemsByFile method  
+    
 - 1.7.0 -- 2020-07-02
 
     - add LightBMenuService->addDefaultItemByFile method  
