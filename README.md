@@ -1,6 +1,6 @@
 Light_BMenu
 ===========
-2019-08-08 -> 2021-03-05
+2019-08-08 -> 2021-03-15
 
 
 
@@ -85,6 +85,10 @@ $bmenu.methods_collection:
 History Log
 =============
 
+- 1.9.4 -- 2021-03-15
+
+    - update planet to adapt Ling.Light:0.70.0
+  
 - 1.9.3 -- 2021-03-05
 
     - update README.md, add install alternative
